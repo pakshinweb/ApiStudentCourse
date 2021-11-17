@@ -9,7 +9,6 @@ use App\Models\CourseStudent;
 use App\Models\Student;
 use App\Repository\StudentRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 
 class ApiStudentController extends Controller
@@ -17,17 +16,15 @@ class ApiStudentController extends Controller
 
     public function getStudent(Request $request)
     {
-
          $students = Student::with('courses');
-         if (empty($request->input('age')) && empty($request->input('gender'))) {
-             return $students->paginate(2);
-         } else {
-             foreach ($request->all() as $k => $item) {
-                 $students->where($k, $item);
-             }
-             return $students->paginate(2);
+         $arguments = [
+             'age',
+             'gender',
+         ];
+         foreach ($arguments as $argument) {
+             if ($request->has($argument)) $students->where($argument, $request->input($argument));
          }
-
+        return $students->paginate(2);
     }
 
     public function getCourse(Request $request) {
@@ -36,12 +33,9 @@ class ApiStudentController extends Controller
                 ->paginate(2);
         } else {
             $ids = explode(',', $request->input('id'));
-
-                $result = Student::with('courses')
+            return Student::with('courses')
                     ->whereIn('id', $ids)
                     ->get();
-
-            return $result;
         }
     }
 
