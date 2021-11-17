@@ -1,0 +1,11 @@
+.idea/
+app/node_modules/
+app/public/storage/
+app/vendor
+app/storage/*.key
+
+docker/data
+app/.env
+app/.env.backup
+app/.phpunit.result.cache
+app/docker-compose.override.yml
