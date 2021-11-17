@@ -28,3 +28,8 @@ composer create-project
 docker-compose up -d
 docker-compose exec php php artisan migrate --seed
 ```
+### Api routes
+```
+localhost/api/student?age=18&gender=male
+localhost/api/course?id=4,1,3
+```
