@@ -8,7 +8,7 @@ Implement a microservice for working with a student magazine. The service has tw
 git clone https://github.com/pakshinweb/ApiStudentCourse.git
 ```
 ```
-cd ApiStudentCourse/
+cd ApiStudentCourse/app
 ```
 ### Install Docker
 ```
