@@ -18,6 +18,9 @@ class CreateStudentTable extends Migration
             $table->integer('age');
             $table->string('gender');
             $table->timestamps();
+
+            $table->index('age');
+            $table->index('gender');
         });
     }
 

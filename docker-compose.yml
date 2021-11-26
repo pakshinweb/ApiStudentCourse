@@ -8,19 +8,25 @@ services:
         - ./app:/usr/share/nginx/html
       ports:
         - "80:80"
+      depends_on:
+        - php
 
     php:
-      build: ./docker/php
+      build:
+        context: .
+        dockerfile: ./docker/php/Dockerfile
+        args:
+          user: $USER
       restart: always
-      expose:
-        - "9000"
       volumes:
         - ./app:/usr/share/nginx/html
+      expose:
+        - "9000"
 
     pgsql:
       image: postgres
       restart: always
       environment:
         POSTGRES_DB: test
-        POSTGRES_USER: root
+        POSTGRES_USER: main
         POSTGRES_PASSWORD: example

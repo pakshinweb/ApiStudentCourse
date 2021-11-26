@@ -19,14 +19,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 docker stop $(docker ps -q -a)
 ```
-### Composer
+### Start api
 ```
-composer create-project
-```
-### Docker-compose
-```
-docker-compose up -d
-docker-compose exec php php artisan migrate --seed
+. start.sh
 ```
 ### Api routes
 ```
