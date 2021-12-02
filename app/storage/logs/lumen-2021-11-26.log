@@ -363,3 +363,100 @@ Did you mean this?
 #53 /usr/share/nginx/html/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #54 {main}
 "} 
+[2021-11-26 12:32:58] local.ERROR: Declaration of App\Repository\StudentRepository::getByGenderAge(Illuminate\Http\Request $request) must be compatible with App\Repository\IRepository::getByGenderAge() {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Repository\\StudentRepository::getByGenderAge(Illuminate\\Http\\Request $request) must be compatible with App\\Repository\\IRepository::getByGenderAge() at /usr/share/nginx/html/app/Repository/StudentRepository.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2021-11-26 12:33:49] local.ERROR: Class "App\Repository\Student" not found {"exception":"[object] (Error(code: 0): Class \"App\\Repository\\Student\" not found at /usr/share/nginx/html/app/Repository/StudentRepository.php:12)
+[stacktrace]
+#0 /usr/share/nginx/html/app/Http/Controllers/Api/ApiStudentController.php(19): App\\Repository\\StudentRepository::getByGenderAge(Object(Laravel\\Lumen\\Http\\Request))
+#1 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(36): App\\Http\\Controllers\\Api\\ApiStudentController->getStudent(Object(Laravel\\Lumen\\Http\\Request))
+#2 /usr/share/nginx/html/vendor/illuminate/container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#5 /usr/share/nginx/html/vendor/illuminate/container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#6 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#7 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#8 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Api\\ApiStudentController), 'getStudent', Array)
+#9 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#10 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#11 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#12 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(429): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#14 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#15 /usr/share/nginx/html/public/index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2021-11-26 12:47:15] local.ERROR: Interface "App\Repository\Contract\IStudentRepository" not found {"exception":"[object] (Error(code: 0): Interface \"App\\Repository\\Contract\\IStudentRepository\" not found at /usr/share/nginx/html/app/Repository/StudentRepository.php:11)
+[stacktrace]
+#0 /usr/share/nginx/html/vendor/composer/ClassLoader.php(571): include()
+#1 /usr/share/nginx/html/vendor/composer/ClassLoader.php(428): Composer\\Autoload\\includeFile('/usr/share/ngin...')
+#2 /usr/share/nginx/html/app/Http/Controllers/Api/ApiStudentController.php(19): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Repository\\\\...')
+#3 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(36): App\\Http\\Controllers\\Api\\ApiStudentController->getStudent(Object(Laravel\\Lumen\\Http\\Request))
+#4 /usr/share/nginx/html/vendor/illuminate/container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#6 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#7 /usr/share/nginx/html/vendor/illuminate/container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#8 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#9 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#10 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Api\\ApiStudentController), 'getStudent', Array)
+#11 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#12 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#13 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#14 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(429): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#15 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#16 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#17 /usr/share/nginx/html/public/index.php(28): Laravel\\Lumen\\Application->run()
+#18 {main}
+"} 
+[2021-11-26 12:51:19] local.ERROR: Call to undefined method App\Repository\StudentRepository::getByGenderAge() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Repository\\StudentRepository::getByGenderAge() at /usr/share/nginx/html/app/Http/Controllers/Api/ApiStudentController.php:19)
+[stacktrace]
+#0 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(36): App\\Http\\Controllers\\Api\\ApiStudentController->getStudent(Object(Laravel\\Lumen\\Http\\Request))
+#1 /usr/share/nginx/html/vendor/illuminate/container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 /usr/share/nginx/html/vendor/illuminate/container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Api\\ApiStudentController), 'getStudent', Array)
+#8 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(429): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#12 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#13 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#14 /usr/share/nginx/html/public/index.php(28): Laravel\\Lumen\\Application->run()
+#15 {main}
+"} 
+[2021-11-26 12:57:02] local.ERROR: Class "App\Http\Controllers\Api\CourseRepository" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Api\\CourseRepository\" not found at /usr/share/nginx/html/app/Http/Controllers/Api/ApiStudentController.php:24)
+[stacktrace]
+#0 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(36): App\\Http\\Controllers\\Api\\ApiStudentController->getCourse(Object(Laravel\\Lumen\\Http\\Request))
+#1 /usr/share/nginx/html/vendor/illuminate/container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 /usr/share/nginx/html/vendor/illuminate/container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 /usr/share/nginx/html/vendor/illuminate/container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Api\\ApiStudentController), 'getCourse', Array)
+#8 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(429): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#12 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#13 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#14 /usr/share/nginx/html/public/index.php(28): Laravel\\Lumen\\Application->run()
+#15 {main}
+"} 
+[2021-11-26 12:57:33] local.ERROR: Class App\Repository\CourseRepository contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Repository\Contract\ICourseRepository::getByIds) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Class App\\Repository\\CourseRepository contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Repository\\Contract\\ICourseRepository::getByIds) at /usr/share/nginx/html/app/Repository/CourseRepository.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2021-11-26 19:56:09] local.ERROR: Command "test" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"test\" is not defined. at /usr/share/nginx/html/vendor/symfony/console/Application.php:682)
+[stacktrace]
+#0 /usr/share/nginx/html/vendor/symfony/console/Application.php(255): Symfony\\Component\\Console\\Application->find('test')
+#1 /usr/share/nginx/html/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /usr/share/nginx/html/vendor/illuminate/console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /usr/share/nginx/html/vendor/laravel/lumen-framework/src/Console/Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /usr/share/nginx/html/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
